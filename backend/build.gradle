@@ -10,8 +10,27 @@ repositories {
 
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation 'io.quarkus:quarkus-rest'
+    implementation 'io.quarkus:quarkus-hibernate-validator'
+    implementation 'io.quarkus:quarkus-rest-jackson'
+    implementation 'io.quarkus:quarkus-hibernate-orm-panache'
+    implementation 'io.quarkus:quarkus-jdbc-postgresql'
     implementation 'io.quarkus:quarkus-arc'
-    testImplementation 'io.quarkus:quarkus-junit5'
+
+    implementation 'de.mkammerer:argon2-jvm:2.12'
+    implementation 'com.google.code.gson:gson:2.13.1'
+    implementation 'com.auth0:java-jwt:4.4.0'
+
+    implementation 'io.quarkiverse.resteasy-problem:quarkus-resteasy-problem:3.20.1'
+
+    implementation "com.github.docker-java:docker-java:3.3.6"
+    implementation "com.github.docker-java:docker-java-transport-httpclient5:3.3.6"
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
 }
 
 group = 'com.slxca'
